@@ -12,7 +12,6 @@ module NewUmeng
         type: 'broadcast',
         production_mode: opts[:production_mode]
       }
-      binding.pry
       case @plantform
       when 'Android'
         params.merge! android_params(opts)
@@ -47,7 +46,6 @@ module NewUmeng
         type: 'listcast',
         production_mode: opts[:production_mode]
       }
-      binding.pry
       case @plantform
       when 'Android'
         params.merge! android_params(opts)
@@ -58,5 +56,27 @@ module NewUmeng
       end
     end
 
+    # 组播
+    def push_groupcast(filter, opts={})
+      params = {
+        type: 'groupcast',
+        filter: {
+          where: {
+            and: {
+              or: filter
+            }
+          }
+        },
+        production_mode: opts[:production_mode]
+      }
+      case @plantform
+      when 'Android'
+        params.merge! android_params(opts)
+        push(params)
+      when 'iOS'
+        params.merge! ios_params(opts)
+        push(params)
+      end
+    end
   end
 end

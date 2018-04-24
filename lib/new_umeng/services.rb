@@ -5,7 +5,7 @@ module NewUmeng
     include NewUmeng::Util
 
     # 消息发送
-    # POST http://msg.new_umeng.com/api/send?sign=mysign
+    # POST http://msg.umeng.com/api/send?sign=mysign
     def push(params={})
       uri = 'api/send'
       params.merge!({
@@ -16,7 +16,7 @@ module NewUmeng
     end
 
     # 查看状态
-    # POST http://msg.new_umeng.com/api/status?sign=mysign
+    # POST http://msg.umeng.com/api/status?sign=mysign
     def status(task_id)
       uri = 'api/status'
       params = {
@@ -28,7 +28,7 @@ module NewUmeng
     end
 
     #取消任务
-    #POST http://msg.new_umeng.com/api/cancel?sign=mysign
+    #POST http://msg.umeng.com/api/cancel?sign=mysign
     def cancel(task_id)
       uri = 'api/cancel'
       params = {
