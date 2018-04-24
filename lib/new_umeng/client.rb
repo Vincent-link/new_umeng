@@ -3,11 +3,11 @@ require 'faraday'
 require 'digest'
 require 'new_umeng/send_message'
 
-module new_umeng
-  new_umeng_HOST = 'http://msg.umeng.com'
+module NewUmeng
+  UMENG_HOST = 'http://msg.umeng.com'
 
   class Client
-    include new_umeng::SendMessage
+    include NewUmeng::SendMessage
 
     attr_accessor :appkey, :app_master_secretm, :plantform
 

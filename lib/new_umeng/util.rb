@@ -1,8 +1,8 @@
-module new_umeng
+module NewUmeng
   module Util
     def generate_sign(uri, params)
       method = 'POST'
-      url = [new_umeng::new_umeng_HOST, '/', uri]
+      url = [NewUmeng::UMENG_HOST, '/', uri]
       post_body = JSON.dump(params)
       Digest::MD5.hexdigest([method, url, post_body, @app_master_secret].join)
     end

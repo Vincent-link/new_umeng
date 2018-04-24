@@ -1,4 +1,4 @@
-module new_umeng
+module NewUmeng
   module JsonBody
     def android_params(opts={})
       {

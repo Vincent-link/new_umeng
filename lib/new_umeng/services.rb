@@ -1,8 +1,8 @@
 require 'new_umeng/util'
 
-module new_umeng
+module NewUmeng
   module Services
-    include new_umeng::Util
+    include NewUmeng::Util
 
     # 消息发送
     # POST http://msg.new_umeng.com/api/send?sign=mysign
@@ -41,7 +41,7 @@ module new_umeng
 
     private
       def request(uri, params)
-        conn = Faraday.new(:url => new_umeng::new_umeng_HOST) do |faraday|
+        conn = Faraday.new(:url => NewUmeng::UMENG_HOST) do |faraday|
           faraday.request  :url_encoded
           faraday.response :logger
           faraday.adapter  Faraday.default_adapter

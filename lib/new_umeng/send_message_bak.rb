@@ -1,10 +1,10 @@
 require 'new_umeng/services'
 require 'new_umeng/json_body'
 
-module new_umeng
+module NewUmeng
   module SendMessage
-    include new_umeng::Services
-    include new_umeng::JsonBody
+    include NewUmeng::Services
+    include NewUmeng::JsonBody
 
     module APIKey
       PRODUCTION_MODE = :production_mode
