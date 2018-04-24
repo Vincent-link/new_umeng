@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name        = 'new_umeng'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.date        = '2018-04-24'
   s.summary     = "new_umeng"
   s.description = "umeng API"

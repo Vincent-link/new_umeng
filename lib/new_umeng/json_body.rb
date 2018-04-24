@@ -15,9 +15,9 @@ module NewUmeng
       {
         payload: {
           aps: {
-            alert: opts[:key_value]["content"]
-          },
-          sound: 'aiff'
+            alert: opts[:key_value]["content"],
+            sound: 'aiff'
+          }
         }.merge(opts[:key_value])
       }
     end
